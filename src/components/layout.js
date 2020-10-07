@@ -19,7 +19,7 @@ export default function Layout({ children }) {
     <div
       css={css`
         margin: 0 auto;
-        max-width: 700px;
+        max-width: 1000px;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
       `}
@@ -36,12 +36,24 @@ export default function Layout({ children }) {
         </h3>
       </Link>
       <Link
-        to={`/about/`}
+        to={`/tohu/`}
         css={css`
+          margin: 0px 10px;
           float: right;
+          color:blue;
         `}
       >
-        About
+        とうふ
+      </Link>
+      <Link
+        to={`/about/`}
+        css={css`
+          margin: 0px 10px;
+          float: right;
+          color:blue;
+        `}
+      >
+        自己紹介
       </Link>
       {children}
     </div>

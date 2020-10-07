@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Title from siteMetadata`,
+    title: `自己紹介`,
     description: `A simple description about pandas eating lots...`,
     author: `gatsbyjs`,
+    myName: `Mark Saito`,
   },
   plugins: [
     {
