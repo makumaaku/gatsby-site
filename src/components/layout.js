@@ -1,6 +1,8 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
+import '../styles/global.css'
+
 
 import { rhythm } from "../utils/typography"
 export default function Layout({ children }) {
