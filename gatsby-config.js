@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `自己紹介`,
+    title: `練習でサイト作ってみた`,
     description: `A simple description about pandas eating lots...`,
     author: `gatsbyjs`,
     myName: `Mark Saito`,

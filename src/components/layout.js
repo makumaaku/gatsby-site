@@ -19,7 +19,7 @@ export default function Layout({ children }) {
     <div
       css={css`
         margin: 0 auto;
-        max-width: 1000px;
+        max-width: 1200px;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
       `}

@@ -10,7 +10,7 @@ import TwitterArea from "../components/organizms/twitter-area"
 export default function About({ data }) {
   return (
     <Layout>
-      <h1>{data.site.siteMetadata.title}</h1>
+      <h1>自己紹介</h1>
       <div css={css`
            display:flex;	
            flex-diretion: row;
