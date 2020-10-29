@@ -4,9 +4,6 @@ import { css } from "@emotion/core"
 export default function TwitterArea() {
     return (
     <div css={css`
-        display:flex;	
-        flex-direction: column;
-        justify-content: space-evenly;
         padding:10px;
        `}>
        <h2>Twitter</h2>

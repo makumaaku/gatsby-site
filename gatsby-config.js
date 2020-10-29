@@ -1,9 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `練習でサイト作ってみた`,
+    title: `First App`,
+    item1:`事業内容`,
+    item2:`お問い合わせ`,
+    item3:`自己紹介`,
     description: `A simple description about pandas eating lots...`,
     author: `gatsbyjs`,
     myName: `Mark Saito`,
+    copylight:`©First App`,
   },
   plugins: [
     {

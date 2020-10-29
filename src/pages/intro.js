@@ -10,17 +10,19 @@ import TwitterArea from "../components/organizms/twitter-area"
 export default function About({ data }) {
   return (
     <Layout>
-      <h1>自己紹介</h1>
-      <div css={css`
-           display:flex;	
-           flex-diretion: row;
-           flex-wrap:wrap;
-           justify-content: space-evenly;
-          `}>
-	     <YoutubeArea></YoutubeArea>
-       <BlogArea></BlogArea>
-       <NoteArea> </NoteArea>
-       <TwitterArea></TwitterArea>
+      <h1>{data.site.siteMetadata.item3}</h1>
+      <div
+        css={css`
+          display: flex;
+          flex-diretion: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        `}
+      >
+        <YoutubeArea></YoutubeArea>
+        <BlogArea></BlogArea>
+        <NoteArea> </NoteArea>
+        <TwitterArea></TwitterArea>
       </div>
       <p>
         We're the only site running on your computer dedicated to showing the
@@ -35,6 +37,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        item3
       }
     }
   }

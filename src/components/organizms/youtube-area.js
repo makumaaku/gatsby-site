@@ -4,11 +4,8 @@ import { css } from "@emotion/core"
 export default function YoutubeArea() {
     return (
         <div css={css`
-        display:flex;	
-        flex-direction: column;
-        flex-wrap:wrap;
-        justify-content: space-evenly;
         padding:10px;
+       
        `}>
        <h2>Youtube</h2>
        <iframe width="400" height="230" src="https://www.youtube.com/embed/I8dIlWAi-8Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen　title = "Youtubeのサムネイル"></iframe>

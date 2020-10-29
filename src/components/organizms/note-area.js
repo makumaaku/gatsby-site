@@ -4,11 +4,8 @@ import { css } from "@emotion/core"
 export default function NoteArea() {
     return (
         <div css={css`
-        display:flex;	
-        flex-direction: column;
-        flex-wrap:wrap;
-        justify-content: space-evenly;
         padding:10px;
+      
        `}>
        <h2>Note</h2>
        <a href="https://note.com/makumaaku">

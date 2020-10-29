@@ -1,63 +1,25 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { useStaticQuery, Link, graphql } from "gatsby"
-import '../styles/global.css'
+import Header from "../components/organizms/header"
+import "../styles/global.css"
+import Footer from "./organizms/footer"
 
-
-import { rhythm } from "../utils/typography"
 export default function Layout({ children }) {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `
-  )
   return (
     <div
       css={css`
-        margin: 0 auto;
-        max-width: 1200px;
-        padding: ${rhythm(2)};
-        padding-top: ${rhythm(1.5)};
+        max-width: 100%;
       `}
     >
-      <Link to={`/`}>
-        <h3
-          css={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
-            font-style: normal;
-          `}
-        >
-          {data.site.siteMetadata.title}
-        </h3>
-      </Link>
-      <Link
-        to={`/tohu/`}
+      <Header></Header>
+      <div
         css={css`
-          margin: 0px 10px;
-          float: right;
-          color:blue;
+          padding: 100px 0px;
         `}
       >
-        とうふ
-      </Link>
-      <Link
-        to={`/about/`}
-        css={css`
-          margin: 0px 10px;
-          float: right;
-          color:blue;
-        `}
-      >
-        自己紹介
-      </Link>
-      {children}
+        {children}
+        <Footer></Footer>
+      </div>
     </div>
   )
 }
