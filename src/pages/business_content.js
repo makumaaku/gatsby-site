@@ -2,53 +2,72 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import Layout from "../components/layout"
-import { rhythm } from "../utils/typography"
+import App1 from "../assets/bodyrecords.jpeg"
+import App2 from "../assets/salaryrecord.jpeg"
+import App3 from "../assets/seeing.jpeg"
+import App4 from "../assets/bench_press.jpeg"
 
 export default function BusinessContent({ data }) {
   return (
     <Layout>
-        <h1>{data.site.siteMetadata.item1}</h1>
-      <div css={css`
-           float: left;
-           padding-right:50px
-          `}>
-      <img src="https://lh3.googleusercontent.com/z6c98Rl5CyftG-TJJtspZ8Y27BitlS6aajJCZXp8t6ej0f3PCKb-YCi-YOlJFx6cTz_KHpCHnXeDZgBAb0-Vkz2GPfalR8WgNZ3sTUCY5461IGKs_nm05vsiRhha4m3kjaaZ0PJQoa0YUVotM4wBxB7q4yUNUJIHupMLV8IRp2XRcK9TbMvwDt80gYrDIGNjWzNAvYTDiyxuHvQJ8s7a8MofEecF6izpPlTi1RHDprbO3hFPnvDDfcki5ndZ-Jq2iV-RmsHVC_9bDrTxWyTzwkQcCNhWJJ4mqvcY9JOVx9XLZ8RV6HnOGzy9poznylWRrutdVLPdEnfYIF5HlKTz7s9hoX9yNr5_qMFEboQH9NNBb-w0-wuqh__fNjMtseFuvDCPnJqOArzW0uAooqMy0wfJjAC0D6l84ikWFvUP9znHRS79pGBsIzqgFTWmsRSde-2SVpsQTyhJm54jkbvJ3AsC0RMRE_GDPKKNEbpxUDsU59s-aaHbQMLJX0VphuGzo7TZS6TyOZgHiO-7MT8-1KkH6_HGS6qLrJ1B5FPd6I2zqpnbBq1sZc4eSM86vCNlkk5LGYKlaxhf0tAJMOvX6a_I3RsTrBpz-MDdW_376S50SZ7QsSyRF4sE4FmdjHAN96nyenaR9bXbfbb9d4HIGEXQHlrlprZbQHI9dTgBnZRdvZAOXP531ADb0qza=w1280-h853-no?authuser=0" alt="とうふの写真" width="600" height="400"></img>
+      <h1>{data.site.siteMetadata.item1}</h1>
+      <h1>開発実績</h1>
+      <div
+        css={css`
+          display: flex;
+          flex-diretion: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        `}
+      >
+        <a href="https://apple.co/3e6K3nv">
+          <img
+            src={App1}
+            alt="BodyRecords"
+            css={css`
+            width: 200px;
+              padding: 10px;
+            `}
+          ></img>
+        </a>
+        <a href="https://apple.co/37T02Ev">
+          <img
+            src={App2}
+            alt="月収チェッカー"
+            css={css`
+            width: 200px;
+              padding: 10px;
+            `}
+          ></img>
+        </a>
+        <a href="https://apple.co/37SFoUR">
+          <img
+            src={App3}
+            alt="Seeing"
+            css={css`
+            width: 200px;
+              padding: 10px;
+            `}
+          ></img>
+        </a>
+        <a href="https://apple.co/2TCAoeM">
+          <img
+            src={App4}
+            alt="全国ベンチプレスランキング"
+            css={css`
+            width: 200px;
+              padding: 10px;
+            `}
+          ></img>
+        </a>
       </div>
-      <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
-              >
-                {node.frontmatter.title}{" "}
-                <span
-                  css={css`
-                    color: #555;
-                  `}
-                >
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
-        ))}
     </Layout>
   )
 }
 
 export const query = graphql`
-{
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+  {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {

@@ -69,7 +69,7 @@ export default function Header() {
           `}
         >
           <Link
-            to={`/tohu/`}
+            to={`/otoiawase/`}
             css={css`
               color: blue;
             `}
